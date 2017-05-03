@@ -1,0 +1,63 @@
+<html>
+<head>
+
+</head>
+<header>
+
+    <meta charset="UTF-8">
+    <title>Super Awesome Me</title>
+    <link href="stylesheets/style.css" rel="stylesheet"/>
+
+    <!-- CSS (load bootstrap from a CDN) -->
+    <link href="stylesheets/bootstrap.css" rel="stylesheet"/>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="javascripts/bootstrap.js"></script>
+
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <a class="navbar-brand">
+                    Learning Node.Js
+                </a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="/logout">Logout</a></li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+</header>
+<body>
+
+<div class="row">
+    <div class="col-sm-1">Welcome, </div><div class="col-sm-1"><%= a.toUpperCase() %></div>
+</div>
+
+<div class="jumbotron">
+    <%for(user of users){%>
+    <div class="row">
+        <div class="col-sm-2"><h2>Username :</h2></div><div class="col-sm-3"> <h3><%= user.username %> </h3>
+        </div>
+        <div class="col-sm-2"><h2>Password :</h2></div><div class="col-sm-3"> <h3><%= user.password %> </h3>
+        </div>
+    </div>
+    <%}%>
+        </div>
+</div>
+
+
+</body>
+
+<footer>
+    <% include footer %>
+</footer>
+</html>
